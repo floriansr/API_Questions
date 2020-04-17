@@ -1,0 +1,9 @@
+body {
+	background-color: lightgrey;
+}
+
+.card-inner {
+  display: flex;
+  overflow: hidden;
+  height: auto;
+}
