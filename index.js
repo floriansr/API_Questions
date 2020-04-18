@@ -2,20 +2,23 @@ const form = document.getElementById('searchbar');
 
  form.innerHTML += `
 
+
+ 	<img src="julien_lepers.jpg" class="mt-3" style="height: 450px; width: 100%; object-fit: cover; border-top-right-radius: 15px; border-top-left-radius:15px">
+
         <form>
 
-				<select class="col-12 mt-5 mb-3 form-control" id="input" size="5">
+				<select class="form-control text-center" id="input" size="6">
 
 					<optgroup label=">--Please choose an option--<">
-				    <option value="10">10</option>
-				    <option value="20">20</option>
-				    <option value="30">30</option>
-				    <option value="40">40</option>
-				    <option value="50">50</option>
+				    <option value="10">10 questions</option>
+				    <option value="20">20 questions</option>
+				    <option value="30">30 questions</option>
+				    <option value="40">40 questions</option>
+				    <option value="50">50 questions -- GOD MODE</option>
 
 				</select>
 
-           		<button type="submit" id="submit_formulaire" class="btn btn-primary btn-lg btn-block mb-5">Submit</button>
+           		<button type="submit" id="submit_formulaire" class="btn btn-primary btn-lg btn-block mb-5">START</button>
         </form>
     `
 
@@ -28,12 +31,10 @@ const selectedValue = (e) => {
 
 document.getElementById('submit_formulaire').addEventListener("click", selectedValue);
 
-
-
-const animeObject = window.anime({
-  targets: '.card',
+anime({
+  targets: 'div',
   translateX: {
-    value: 250,
+    value: 0,
     duration: 800
   },
   rotate: {
@@ -42,10 +43,10 @@ const animeObject = window.anime({
     easing: 'easeInOutSine'
   },
   scale: {
-    value: 2,
+    value: 1,
     duration: 1600,
     delay: 800,
     easing: 'easeInOutQuart'
   },
-  delay: 250 // All properties except 'scale' inherit 250ms delay
+  delay: 250
 });

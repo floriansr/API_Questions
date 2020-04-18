@@ -6,4 +6,13 @@ body {
   display: flex;
   overflow: hidden;
   height: auto;
+
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.8s, opacity 0.4s;
+}
+
+.card-inner.not-visible {
+  transform: translateX(50px);
+  opacity: 0;
 }
